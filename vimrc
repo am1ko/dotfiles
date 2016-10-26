@@ -52,12 +52,9 @@ filetype plugin indent on    " required
 
 " Colors
 "------------------------------------------------------------
-"colorscheme badwolf     " awesome colorscheme
 syntax enable           " enable syntax processing
 set background=dark
-"colorscheme hybrid
-colorscheme jellybeans
-"colorscheme solarized
+colorscheme solarized   " default colorscheme
 
 " Spaces & indenting
 "------------------------------------------------------------
@@ -153,6 +150,7 @@ if has("win32")
     set guifont=Consolas:h11:b:cANSI
     "set guifont=Lucida_Console:h10
     "set guifont=courier_new:h11:b
+    colorscheme jellybeans
     scriptencoding utf-8
     set encoding=utf-8
     set listchars=trail:·,tab:>\ ,eol:¬ " show invisible characters
@@ -161,6 +159,7 @@ else
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
         "Mac options here
+        colorscheme hybrid
         set guifont=Menlo:h15
         set listchars=trail:·,tab:▸\ ,eol:¬ " show invisible characters
     else
