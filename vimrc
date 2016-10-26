@@ -20,9 +20,6 @@ Plugin 'keith/swift.vim'
 " Build Xcode project from within vim
 Plugin 'gfontenot/vim-xcode'
 
-" Swift autocompletion
-Plugin 'keith/sourcekittendaemon.vim'
-
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'w0ng/vim-hybrid.git'
@@ -42,6 +39,12 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " Status/tabline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+" Completion
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
+"Plugin 'keith/sourcekittendaemon.vim'
+Plugin 'mitsuse/autocomplete-swift'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -103,6 +106,12 @@ nnoremap <leader>q :q<CR>
 " Map this way instead of making space leader so that \ shows in lower  right corner when pressing leader.
 map <space> <leader>
 
+" Open new tab
+nnoremap <leader>t :tabnew<CR>
+
+" Remove trailing blanks
+:nnoremap <leader>b :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
 " Quick window switching
 map <C-H> <C-W>h
 map <C-J> <C-W>j
@@ -118,6 +127,7 @@ map <F6> :VimuxRunLastCommand<CR>
 " Start NERDTree
 autocmd VimEnter * NERDTree
 let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
 
 " CtrlP configs
 " Should make it faster ... should test more
@@ -126,12 +136,10 @@ let NERDTreeShowBookmarks=1
 let g:ctrlp_max_files = 0
 " Search from current directory instead of project root
 let g:ctrlp_working_path_mode = 0
-
-" Airline configs
-" Enable the list of buffers
-" let g:airline#extensions#tabline#enabled = 1
-" Show just the filename
-" let g:airline#extensions#tabline#fnamemod = ':t'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|o|d|dylib|swiftmodule|dia|swiftdeps)$',
+  \ }
 
 "OTHER
 "------------------------------------------------------------
@@ -162,6 +170,8 @@ else
         colorscheme hybrid
         set guifont=Menlo:h15
         set listchars=trail:·,tab:▸\ ,eol:¬ " show invisible characters
+        set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o,*.d
+        let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
     else
         "Linux options here
     endif
