@@ -56,8 +56,8 @@ filetype plugin indent on    " required
 syntax enable           " enable syntax processing
 set background=dark
 "colorscheme hybrid
-"colorscheme jellybeans
-colorscheme solarized
+colorscheme jellybeans
+"colorscheme solarized
 
 " Spaces & indenting
 "------------------------------------------------------------
@@ -67,7 +67,7 @@ set softtabstop=4       " number of spaces per tab when editing. Number of space
 set shiftwidth=4        " number of spaces to add/remove when indenting
 set expandtab           " tabs are spaces
 set backspace=indent,eol,start " make backspace work after e.g. ctrl+A 
-set list
+"set list               " show invisible characters
 
 " UI config
 "------------------------------------------------------------
