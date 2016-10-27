@@ -86,6 +86,13 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 " turn off search highlight using space
 
+" Backup and swap files
+"------------------------------------------------------------
+set nobackup            " no backup files
+"set noswapfile          " no swap files
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
+
 " Key mappings
 "------------------------------------------------------------
 imap jj <Esc>
