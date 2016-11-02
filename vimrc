@@ -61,12 +61,11 @@ colorscheme solarized   " default colorscheme
 
 " Spaces & indenting
 "------------------------------------------------------------
-
 set tabstop=4           " number of visual spaces PER TAB character
 set softtabstop=4       " number of spaces per tab when editing. Number of spaces inserted when hitting tab
 set shiftwidth=4        " number of spaces to add/remove when indenting
 set expandtab           " tabs are spaces
-set backspace=indent,eol,start " make backspace work after e.g. ctrl+A 
+set backspace=indent,eol,start " make backspace work after e.g. ctrl+A
 "set list               " show invisible characters
 
 " UI config
@@ -84,7 +83,8 @@ set guioptions-=L  "remove left-hand scroll bar
 "------------------------------------------------------------
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
-" turn off search highlight using space
+set ignorecase          " ignore case ..
+set smartcase           " .. unless searching with caps
 
 " Backup and swap files
 "------------------------------------------------------------
@@ -156,6 +156,9 @@ augroup reload_vimrc " {
     autocmd!
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
+
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "OS SPECIFIC
 "------------------------------------------------------------
