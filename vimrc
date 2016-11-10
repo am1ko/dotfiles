@@ -93,6 +93,11 @@ set nobackup            " no backup files
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 
+" Mouse support
+"------------------------------------------------------------
+set ttyfast
+set mouse=a
+
 " Key mappings
 "------------------------------------------------------------
 imap jj <Esc>
@@ -160,6 +165,7 @@ augroup END " }
 " Disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+
 "OS SPECIFIC
 "------------------------------------------------------------
 if has("win32")
@@ -182,6 +188,7 @@ else
         set listchars=trail:·,tab:▸\ ,eol:¬ " show invisible characters
         set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o,*.d
         let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+        set ttymouse=xterm2
     else
         "Linux options here
     endif
