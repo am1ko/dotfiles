@@ -62,7 +62,7 @@ filetype plugin indent on    " required
 "------------------------------------------------------------------------------
 syntax enable           " enable syntax processing
 set background=dark
-colorscheme solarized   " default colorscheme
+colorscheme hybrid      " default colorscheme
 
 " Spaces & indenting
 "------------------------------------------------------------------------------
@@ -205,13 +205,15 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "OS SPECIFIC
 "------------------------------------------------------------------------------
-if has("win32")
+
+let s:uname = system("echo -n \"$(uname)\"")
+
+if has("win32") || s:uname=='MINGW64_NT-10.0'
     "Windows options here
     "set guifont=Courier_New:h11:cDEFAULT
     set guifont=Consolas:h11:b:cANSI
     "set guifont=Lucida_Console:h10
     "set guifont=courier_new:h11:b
-    colorscheme jellybeans
     scriptencoding utf-8
     set encoding=utf-8
     set listchars=trail:·,tab:>\ ,eol:¬ " show invisible characters
@@ -220,7 +222,6 @@ else
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
         "Mac options here
-        colorscheme hybrid
         set guifont=Menlo:h15
         set listchars=trail:·,tab:▸\ ,eol:¬ " show invisible characters
         set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o,*.d
