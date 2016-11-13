@@ -44,8 +44,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 " Completion
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'rdnetto/YCM-Generator'
 "Plugin 'keith/sourcekittendaemon.vim'
 Plugin 'mitsuse/autocomplete-swift'
 
