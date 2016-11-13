@@ -140,9 +140,10 @@ map <F6> :VimuxRunLastCommand<CR>
 "------------------------------------------------------------
 
 " Start NERDTree
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
+nnoremap <leader>e :NERDTreeToggle<CR>
 
 " CtrlP configs
 " Should make it faster ... should test more
