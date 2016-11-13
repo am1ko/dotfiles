@@ -24,9 +24,12 @@ Plugin 'gfontenot/vim-xcode'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'w0ng/vim-hybrid.git'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'chriskempson/base16-vim'
 
 " Filesystem explore
 Plugin 'scrooloose/nerdtree.git'
+
+" Git integration
 Plugin 'tpope/vim-fugitive'
 
 " Tmux integration
@@ -122,7 +125,7 @@ map <space> <leader>
 nnoremap <leader>t :tabnew<CR>
 
 " Remove trailing blanks
-:nnoremap <leader>b :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+nnoremap <leader>b :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " Quick window switching
 map <C-H> <C-W>h
