@@ -1,6 +1,7 @@
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
 " VUNDLE PLUGIN CONFIGS
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -52,18 +53,19 @@ Plugin 'mitsuse/autocomplete-swift'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-"------------------------------------------------------------
+
+"------------------------------------------------------------------------------
 " EOF VUNDLE PLUGIN CONFIGS
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
 
 " Colors
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
 syntax enable           " enable syntax processing
 set background=dark
 colorscheme solarized   " default colorscheme
 
 " Spaces & indenting
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
 set tabstop=4           " number of visual spaces PER TAB character
 set softtabstop=4       " number of spaces per tab when editing. Number of spaces inserted when hitting tab
 set shiftwidth=4        " number of spaces to add/remove when indenting
@@ -72,37 +74,38 @@ set backspace=indent,eol,start " make backspace work after e.g. ctrl+A
 "set list               " show invisible characters
 
 " UI config
-"------------------------------------------------------------
-set number              " show line numbers
+"------------------------------------------------------------------------------
+set number              " show absolute line number on current line
+set relativenumber      " show relative line numbers
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
 set wildmenu            " visual autocomplete for command menu
 set showmatch           " highlight matching brackets etc
-set cc=80
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
+set cc=80               " highlight column 80
+set guioptions-=r       " remove right-hand scroll bar
+set guioptions-=L       " remove left-hand scroll bar
 
 " Searching
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set ignorecase          " ignore case ..
 set smartcase           " .. unless searching with caps
 
 " Backup and swap files
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
 set nobackup            " no backup files
 "set noswapfile          " no swap files
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 
 " Mouse support
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
 set ttyfast
 set mouse=a
 
 " Key mappings
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
 imap jj <Esc>
 
 map § ~
@@ -118,7 +121,7 @@ nnoremap <leader>l :set list!<CR>
 " Quit
 nnoremap <leader>q :q<CR>
 
-" Map this way instead of making space leader so that \ shows in lower  right corner when pressing leader.
+" Show / in lower  right corner when pressing leader.
 map <space> <leader>
 
 " Open new tab
@@ -137,7 +140,7 @@ map <F5> :VimuxPromptCommand<CR>
 map <F6> :VimuxRunLastCommand<CR>
 
 "PLUGIN CONFIGS
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
 
 " Start NERDTree
 "autocmd VimEnter * NERDTree
@@ -188,7 +191,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 set laststatus=2 " show statusline by default
 
 "OTHER
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
 set autoread
 
 augroup reload_vimrc " {
@@ -201,7 +204,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 
 "OS SPECIFIC
-"------------------------------------------------------------
+"------------------------------------------------------------------------------
 if has("win32")
     "Windows options here
     "set guifont=Courier_New:h11:cDEFAULT
