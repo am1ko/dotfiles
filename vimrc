@@ -200,6 +200,7 @@ let s:uname = system("echo -n \"$(uname)\"")
 
 if has("win32") || s:uname=='MINGW64_NT-10.0'
     "Windows options here
+    set ttymouse=xterm2
     "set guifont=Courier_New:h11:cDEFAULT
     set guifont=Consolas:h11:b:cANSI
     "set guifont=Lucida_Console:h10
