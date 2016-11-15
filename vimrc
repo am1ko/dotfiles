@@ -90,7 +90,9 @@ set guioptions-=L       " remove left-hand scroll bar
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set ignorecase          " ignore case ..
-set smartcase           " .. unless searching with caps
+set smartcase           " .. unless search string contains caps
+set path=**             " find files recursively with :find
+set complete-=i         " do not scan included files for autocomplete (slow)
 
 " Backup and swap files
 "------------------------------------------------------------------------------
