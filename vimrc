@@ -204,7 +204,9 @@ else
         set listchars=trail:·,tab:▸\ ,eol:¬ " show invisible characters
         set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o,*.d
         let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
-        set ttymouse=xterm2
+        if !has('nvim')
+            set ttymouse=xterm2
+        endif
     else
         "Linux options here
     endif
