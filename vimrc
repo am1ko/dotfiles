@@ -39,6 +39,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 " Fuzzy search
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'wincent/command-t'
 
 " Status/tabline
 Plugin 'vim-airline/vim-airline'
@@ -49,6 +50,9 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'rdnetto/YCM-Generator'
 "Plugin 'keith/sourcekittendaemon.vim'
 Plugin 'mitsuse/autocomplete-swift'
+
+" Other
+Plugin 'ntpeters/vim-better-whitespace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -125,9 +129,6 @@ nnoremap <leader>q :q<CR>
 
 " Show / in lower  right corner when pressing leader.
 map <space> <leader>
-
-" Open new tab
-nnoremap <leader>t :tabnew<CR>
 
 " Remove trailing blanks
 nnoremap <leader>b :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
