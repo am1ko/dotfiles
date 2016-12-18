@@ -32,6 +32,7 @@ Plugin 'scrooloose/nerdtree.git'
 
 " Git integration
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 " Tmux integration
 Plugin 'benmills/vimux'
@@ -50,6 +51,7 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'rdnetto/YCM-Generator'
 "Plugin 'keith/sourcekittendaemon.vim'
 Plugin 'mitsuse/autocomplete-swift'
+Plugin 'Rip-Rip/clang_complete'
 
 " Other
 Plugin 'ntpeters/vim-better-whitespace'
