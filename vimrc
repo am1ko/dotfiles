@@ -102,6 +102,7 @@ set ignorecase          " ignore case ..
 set smartcase           " .. unless search string contains caps
 set path=**             " find files recursively with :find
 set complete-=i         " do not scan included files for autocomplete (slow)
+set wildignore+=*.pdf
 
 " Backup and swap files
 "------------------------------------------------------------------------------
