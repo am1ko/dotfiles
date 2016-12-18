@@ -53,6 +53,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mitsuse/autocomplete-swift'
 Plugin 'Rip-Rip/clang_complete'
 
+" Syntax checking
+Plugin 'scrooloose/syntastic'
+
 " Other
 Plugin 'ntpeters/vim-better-whitespace'
 
@@ -170,6 +173,10 @@ let g:ctrlp_custom_ignore = {
 let g:airline_theme='bubblegum'
 let g:airline_powerline_fonts=1
 set laststatus=2 " show statusline by default
+
+" Syntastic
+let g:syntastic_c_checkers = ['cppcheck', 'gcc', 'splint']
+let g:syntastic_cpp_checkers = ['cppcheck', 'gcc']
 
 "OTHER
 "------------------------------------------------------------------------------
