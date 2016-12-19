@@ -51,7 +51,8 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'rdnetto/YCM-Generator'
 "Plugin 'keith/sourcekittendaemon.vim'
 Plugin 'mitsuse/autocomplete-swift'
-Plugin 'Rip-Rip/clang_complete'
+Plugin 'justmao945/vim-clang'
+Plugin 'ervandew/supertab'
 
 " Syntax checking
 Plugin 'scrooloose/syntastic'
@@ -211,7 +212,8 @@ else
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
         "Mac options here
-        set guifont=Menlo:h15
+        autocmd! GUIEnter * set vb t_vb=
+        set guifont=Menlo\ for\ Powerline:h13
         set listchars=trail:·,tab:▸\ ,eol:¬ " show invisible characters
         set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o,*.d
         let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
