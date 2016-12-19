@@ -207,6 +207,8 @@ if has("win32") || s:uname=='MINGW64_NT-10.0'
     scriptencoding utf-8
     set encoding=utf-8
     set listchars=trail:·,tab:>\ ,eol:¬ " show invisible characters
+    set guioptions-=T
+    set guioptions-=m
 else
   if has("unix")
     let s:uname = system("uname")
