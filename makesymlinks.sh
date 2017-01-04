@@ -34,3 +34,7 @@ echo "Creating symlinks for neovim"
 mkdir -p ~/.config
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
+
+echo "Creating swap and backups dirs for vim"
+mkdir -p ~/.vim/swp
+mkdir -p ~/.vim/backup
