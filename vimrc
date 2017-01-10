@@ -17,7 +17,7 @@ Plugin 'rking/ag.vim'
 
 " Swift syntax highlighting
 Plugin 'keith/swift.vim'
-
+Plugin 'rust-lang/rust.vim'
 " Build Xcode project from within vim
 Plugin 'gfontenot/vim-xcode'
 
