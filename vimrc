@@ -12,9 +12,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Searcher
-Plugin 'rking/ag.vim'
-
 " Swift syntax highlighting
 Plugin 'keith/swift.vim'
 Plugin 'rust-lang/rust.vim'
@@ -50,12 +47,12 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rdnetto/YCM-Generator'
 "Plugin 'keith/sourcekittendaemon.vim'
-Plugin 'mitsuse/autocomplete-swift'
-Plugin 'justmao945/vim-clang'
+"Plugin 'mitsuse/autocomplete-swift'
+"Plugin 'justmao945/vim-clang'
 Plugin 'ervandew/supertab'
 
 " Syntax checking
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 
 " Other
 Plugin 'ntpeters/vim-better-whitespace'
@@ -139,6 +136,8 @@ map <space> <leader>
 
 " Remove trailing blanks
 nnoremap <leader>b :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+nnoremap <leader>k :make<Bar>copen<CR><C-w>k
 
 " Quick window switching
 map <C-H> <C-W>h
