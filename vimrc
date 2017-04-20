@@ -23,6 +23,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'w0ng/vim-hybrid.git'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'chriskempson/base16-vim'
+Plugin 'arcticicestudio/nord-vim'
 
 " Filesystem explore
 Plugin 'scrooloose/nerdtree.git'
@@ -49,7 +50,7 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'keith/sourcekittendaemon.vim'
 "Plugin 'mitsuse/autocomplete-swift'
 "Plugin 'justmao945/vim-clang'
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
 
 " Syntax checking
 "Plugin 'scrooloose/syntastic'
