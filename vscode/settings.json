@@ -1,0 +1,74 @@
+// Place your settings in this file to overwrite the default settings
+{
+"rust.rustLangSrcPath": "~/Documents/Code/rust/src",
+"vim.leader": "<space>",
+"vim.hlsearch": true,
+"vim.insertModeKeyBindings": [
+    {
+        "before": ["j", "j"],
+        "after": ["<esc>"]
+    }
+],
+"vim.otherModesKeyBindingsNonRecursive": [
+    {
+        "before": ["leader", "w"],
+        "after": [],
+        "commands": [
+            {
+                "command": "workbench.action.files.save",
+                "args": []
+            }
+        ]
+    },
+    {
+        "before": ["leader", "q"],
+        "after": [],
+        "commands": [
+            {
+                "command": "workbench.action.files.save",
+                "args": []
+            },
+            {
+                "command": "workbench.action.closeActiveEditor",
+                "args": []
+            }
+        ]
+    },
+    {
+        "before": ["leader", "l"],
+        "after": [],
+        "commands": [
+            {
+                "command": "editor.action.toggleRenderWhitespace",
+                "args": []
+            }
+        ]
+    },
+    {
+        "before": ["leader", "e"],
+        "after": [],
+        "commands": [
+            {
+                "command":"workbench.action.toggleSidebarVisibility",
+                "args": []
+            }
+        ]
+    }
+],
+"files.trimTrailingWhitespace": true,
+"editor.detectIndentation": false,
+"editor.insertSpaces": true,
+"editor.renderWhitespace": "none",
+"editor.rulers": [
+    120
+],
+"editor.minimap.enabled": true,
+"workbench.iconTheme": "vs-minimal",
+"[cpp]": {
+    "editor.quickSuggestions": false
+},
+"[c]": {
+    "editor.quickSuggestions": true
+},
+"workbench.colorTheme": "Atom One Dark"
+}
