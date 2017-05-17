@@ -1,6 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
-"rust.rustLangSrcPath": "~/Documents/Code/rust/src",
+"rust.rustLangSrcPath": "/Users/amiko/Documents/Code/rust/src",
+"rust.forceLegacyMode": true,
 "vim.leader": "<space>",
 "vim.hlsearch": true,
 "vim.insertModeKeyBindings": [
@@ -45,6 +46,27 @@
         ]
     },
     {
+        "before": ["leader", "t"],
+        "after": [],
+        "commands": [
+            {
+                "command": "workbench.action.terminal.toggleTerminal",
+                "args": []
+            }
+        ]
+    },
+    {
+        "before": ["leader", "z"],
+        "after": [],
+        "commands": [
+            {
+                "command": "workbench.action.toggleZenMode",
+                "args": []
+            }
+        ]
+    },
+
+    {
         "before": ["leader", "e"],
         "after": [],
         "commands": [
@@ -70,5 +92,9 @@
 "[c]": {
     "editor.quickSuggestions": true
 },
-"workbench.colorTheme": "Atom One Dark"
+"editor.lineNumbers": "relative",
+"gitlens.codeLens.visibility": "ondemand",
+"gitlens.blame.annotation.activeLine": "off",
+"workbench.colorTheme": "Nord",
+"window.zoomLevel": 0
 }
