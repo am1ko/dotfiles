@@ -10,3 +10,5 @@
     tool = vimdiff
 [push]
     default = simple
+[alias]
+    squash = "!f(){ git rebase -i HEAD~${1}; }; f"
